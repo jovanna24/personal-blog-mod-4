@@ -1,17 +1,33 @@
-const formEl = $('#blog-input')
-const usernameEl = $('input[name="username"]'); 
-const titleEl = $('input[name="title"]'); 
-const contentEl = $('input[name="content"]'); 
 
-function handleFormSubmit(event){
+const blogPost = document.getElementById('blog-input')
 
-    event.preventDefault(); 
-
-    console.log('Username:', usernameEl.val());
-    console.log('Title:', titleEl.val());
-    console.log('Content:', contentEl.val());
+const submitBtn = document.getElementById('submit')
 
 
-}
+blogPost.addEventListener('submit', function (event){
+    event.preventDefault();
 
-formEl.on('submit', handleFormSubmit);
+    const usernameEl = document.getElementById('username').value;
+    console.log(usernameEl);
+    const titleEl = document.getElementById('title').value;
+    console.log(titleEl);
+    const contentEl = document.getElementById('content').value;
+    console.log(contentEl);
+
+    const blogEntry = {
+        usernameEl: usernameEl,
+        titleEl: titleEl,
+        contentEl: contentEl,
+    };
+
+    localStorage.setItem('blogEntry', JSON.stringify(blogEntry)); 
+    window.open("./blog.html")
+
+});
+
+
+
+
+
+
+

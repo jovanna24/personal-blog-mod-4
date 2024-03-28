@@ -1,0 +1,32 @@
+body {
+    font-size: 40px;
+    font-family: "Gill Sans", sans-serif;
+    background-color: rgb(184, 204, 204);
+    color: rgb(23, 70, 79);
+}
+
+h1 {
+    position: relative;
+    margin: auto; 
+    width: 50%;
+    padding: auto;
+    text-align: center;
+    text-shadow: 1px 1px 5px white;
+} 
+
+h2 {
+    position: relative;
+    margin: auto; 
+    width: 50%;
+    padding: auto;
+    text-align: center;
+    text-shadow: 1px 1px 3px white;
+}
+
+form {
+    position: relative;
+    margin: auto; 
+    width: 50%;
+    padding: auto;
+    text-align: center;
+}
