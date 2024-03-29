@@ -17,8 +17,8 @@ Begin by opening the homepage of the application. Enter the desired content by f
 ## Acknowledgments 
 * Provided Starter Code
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* MDN WebDocs (https://developer.mozilla.org/en-US/)
-* W3Schools (https://www.w3schools.com/)
+* [MDN WebDocs] (https://developer.mozilla.org/en-US/)
+* [W3Schools] (https://www.w3schools.com/)
 * BCS Tutoring Services
 
 
