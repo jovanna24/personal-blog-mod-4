@@ -4,6 +4,10 @@ const blogPost = document.getElementById('blog-input')
 const submitBtn = document.getElementById('submit')
 
 
+const blogArr =JSON.parse(localStorage.getItem('blogEntry')) || []; 
+
+
+
 blogPost.addEventListener('submit', function (event){
     event.preventDefault();
 
@@ -18,9 +22,15 @@ blogPost.addEventListener('submit', function (event){
         usernameEl: usernameEl,
         titleEl: titleEl,
         contentEl: contentEl,
+
+
+
     };
 
-    localStorage.setItem('blogEntry', JSON.stringify(blogEntry)); 
+
+    blogArr.push(blogEntry);
+
+    localStorage.setItem('blogEntry', JSON.stringify(blogArr)); 
     window.open("./blog.html")
 
 });

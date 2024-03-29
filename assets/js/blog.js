@@ -5,10 +5,10 @@ let isLight = true;
 
 themeButton.on('click', function(){
     if (isLight){
-        $('body').css({'background-color': '#1a1a1a', color: '#d9e9e8' }); 
+        $('body').css({'background-color': 'rgb(184, 204, 204)', color: 'rgb(23, 70, 79)' }); 
         isLight = !isLight;
     }else{
-        $('body').css({'background-color': '#d9e9e8', color: '#1a1a1a' }); 
+        $('body').css({'background-color': 'rgb(23, 70, 79)', color: 'rgb(184, 204, 204)' }); 
         isLight = !isLight;
     }
 });
@@ -17,30 +17,33 @@ themeButton.on('click', function(){
 
 function renderBlogPost() {
 
-    const lastPost = JSON.parse(localStorage.getItem('blogEntry'));
+    const allPosts = JSON.parse(localStorage.getItem('blogEntry'));
     
-    if (lastPost !== null) {
-        document.querySelector('.blog-title').textContent = lastPost.titleEl; 
-        document.querySelector('.blog-content').textContent = lastPost.contentEl;
-        document.querySelector('.username-saved').textContent = lastPost.usernameEl;
-    }
 
-    for (let i = 0; i < lastPost.length; i++) {
-        const post =lastPost[i];
+
+    for (let i = 0; i < allPosts.length; i++) {
+        const post =allPosts[i];
     
         const li = document.createElement('li');
-        li.textContent = post;
-
-        lastPost.appendChild(li);
+        const h2 = document.createElement('h2'); 
+        h2.textContent= `Title: ${post.titleEl} `
+        const p = document.createElement('p')
+        p.textContent= `Post: ${post.contentEl} `
+        const p2 = document.createElement('p'); 
+        p2.textContent = `Author: ${post.usernameEl} `
+        li.appendChild(h2)
+        li.appendChild(p)
+        li.appendChild(p2)
+        postList.appendChild(li);
     }
 
 }
 renderBlogPost(); 
 
 function init(){
-    const storedPosts = JSON.parse(localStorage.getItem('lastPost'));
+    const storedPosts = JSON.parse(localStorage.getItem('allPosts'));
 
     if (storedPosts !== null) {
-        lastPost = storedPosts;
+        allPosts = storedPosts;
     }
 };

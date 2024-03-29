@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <title>My Personal Blog</title>
         <link rel="stylesheet" type="text/css" href="./assets/css/form.css" />
-        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+        
     </head>
     <body class = 'landing-page'>
         <main>
@@ -15,13 +15,13 @@
 
          <form id="blog-input" >
             <label for="username">Username:</label><br>
-            <input type="text" id= "username" name="username" required><br>
+            <input type="text" id= "username" name="username" placeholder="What's your name?"><br>
 
             <label for="title">Title:</label><br>
-            <input type="text" id= "title" name="title" required><br>
+            <input type="text" id= "title" name="title" placeholder="Enter Title of Post"><br>
             <label for="content">Content:</label><br>
-            <input type="text" id= "content" name="content" required><br>
-            <input type = "submit" value="Submit">
+            <input type="text" id= "content" name="content" placeholder="What's on your mind?"><br>
+            <input type = "submit" id= "submit" value="Submit">
             
          </form>
         </main>
